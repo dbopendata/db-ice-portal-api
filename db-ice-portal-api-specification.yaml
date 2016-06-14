@@ -5,6 +5,10 @@ info:
   version: 1.0.0
   title: Deutsche Bahn ICE Portal API
   description: API of the on-board portal of the ICE trains of Deutsche Bahn (http://ice.portal1).
+  termsOfService: 'http://data.deutschebahn.com/apis/iceportal/'
+  contact:
+    name: DB Open Data
+    email: DBOpenData@deutschebahn.com
 schemes:
   - http
 host: ice.portal1
@@ -29,23 +33,23 @@ definitions:
     properties:
       connection:
         type: boolean
-        description: e.g. true
+        description: Connection status, e.g. true
       servicelevel:
         type: string
-        description: e.g. "SERVICE"
+        description: Service level status, e.g. "SERVICE"
       speed:
         type: number
         format: double
-        description: train speed in kilometer per hour, e.g. 185.8000030517578
+        description: Train speed in kilometer per hour, e.g. 185.8000030517578
       longitude:
         type: number
         format: double
-        description: longitude in WGS84 decimal notation, e.g. 10.924448
+        description: Longitude in WGS84 decimal notation, e.g. 10.924448
       latitude:
         type: number
         format: double
-        description: latitude in WGS84 decimal notation, e.g. 52.432009
+        description: Latitude in WGS84 decimal notation, e.g. 52.432009
       serverTime:
         type: integer
         format: int64
-        description: serverTime as unix time (UTC), e.g. 1445351850874 (cut off after 10 characters)
+        description: Server time as unix time (UTC), e.g. 1445351850874
