@@ -1,6 +1,3 @@
-# db-ice-portal-api
-DB ICE Portal API
-
 # DB ICE Portal API
 
 Dieses Repository enthält [Swagger](http://swagger.io/specification/)/[OpenAPI](https://github.com/OAI/OpenAPI-Specification) Spezifikation für die [Deutsche Bahn ICE Portal API](http://data.deutschebahn.com/apis/iceportal/):
