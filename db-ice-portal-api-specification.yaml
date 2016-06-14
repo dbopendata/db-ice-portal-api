@@ -1,0 +1,51 @@
+swagger: "2.0"
+
+info:
+  # version of the API:
+  version: 1.0.0
+  title: Deutsche Bahn ICE Portal API
+  description: API of the on-board portal of the ICE trains of Deutsche Bahn (http://ice.portal1).
+schemes:
+  - http
+host: ice.portal1
+basePath: /jetty/api/v1
+produces:
+  - application/json
+
+paths:
+  /status:
+    get:
+      summary: Train Status
+      description: Returns train status including speed and position
+      responses:
+        200:
+          description: A single status object.
+          schema:
+            $ref: '#/definitions/status'
+
+definitions:
+  status:
+    type: object
+    properties:
+      connection:
+        type: boolean
+        description: e.g. true
+      servicelevel:
+        type: string
+        description: e.g. "SERVICE"
+      speed:
+        type: number
+        format: double
+        description: train speed in kilometer per hour, e.g. 185.8000030517578
+      longitude:
+        type: number
+        format: double
+        description: longitude in WGS84 decimal notation, e.g. 10.924448
+      latitude:
+        type: number
+        format: double
+        description: latitude in WGS84 decimal notation, e.g. 52.432009
+      serverTime:
+        type: integer
+        format: int64
+        description: serverTime as unix time (UTC), e.g. 1445351850874 (cut off after 10 characters)
